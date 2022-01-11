@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+#main {
+  width: 100%;
+  max-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  margin: auto;
+}
+
+#main > header {
+  font-family: verdana, "Helvetica Neue", Helvetica;
+  padding: 1rem;
+  color: #757373;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main > header i {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#main > header span {
+  -webkit-box-flex: 1.4;
+      -ms-flex: 1.4;
+          flex: 1.4;
+  font-size: 0.8rem;
+}
+
+#main .insta_logo {
+  background-color: red;
+  width: 200px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .container {
+  padding: 0 1.5rem;
+  width: 100%;
+  max-width: 370px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main .container .c_W_f {
+  margin-top: 2rem;
+  width: 100%;
+  background-color: #209dce;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.3rem;
+  color: white;
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .container .c_W_f .fa {
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+#main .container .or {
+  background-color: green;
+  margin: 1.7rem 0 1.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .container .or hr {
+  top: 0.55rem;
+  position: absolute;
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 0.5px;
+  z-index: -1;
+  background-color: #c1bfbf;
+}
+
+#main .container .or span {
+  position: absolute;
+  background-color: transparent;
+  padding: 0 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 4;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+}
+
+#main .container form {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main .container form input {
+  height: 35px;
+  margin-top: 0.7rem;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid #c5c5c5;
+  border-radius: 3px;
+  color: grey;
+  font-size: 0.9rem;
+  background-color: rgba(236, 236, 236, 0.285);
+}
+
+#main .container form input::-webkit-input-placeholder {
+  font-size: 0.8rem;
+}
+
+#main .container form input:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+#main .container form input::-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+#main .container form input::placeholder {
+  font-size: 0.8rem;
+}
+
+#main .container form .f_p {
+  color: #047aa5;
+  text-decoration: none;
+  margin: 1rem 0 1rem auto;
+}
+
+#main .container form div.cog {
+  position: relative;
+  margin-top: .7rem;
+}
+
+#main .container form div.cog input[type="submit"] {
+  background-color: #047aa5;
+  color: #fff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  margin-top: 0;
+}
+
+#main .container form div.cog span {
+  display: none;
+}
+
+#main .container form div.cog input[type="submit"]:disabled {
+  cursor: not-allowed;
+}
+
+#main .container form p {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#main .container form p a {
+  color: blue;
+  text-decoration: none;
+}
+
+#main .container form div {
+  position: relative;
+}
+
+#main .container form div input {
+  width: 100%;
+}
+
+#main .container form div small {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.8rem;
+  height: 2.1rem;
+  place-items: center;
+  cursor: pointer;
+  display: none;
+  padding: 0 5px;
+}
+
+#main footer {
+  text-align: center;
+  padding: 0.5rem;
+  border-top: 1px solid #c5c5c5;
+}
+
+#main footer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main footer > div img {
+  width: 25px;
+}
+
+#main footer > div span {
+  font-weight: 200;
+}
+
+#main footer small {
+  font-size: 0.8rem;
+  color: #767676;
+}
+
+#face {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  margin: auto;
+}
+
+#face header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3b5998;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#face header img {
+  width: 140px;
+}
+
+#face .container {
+  width: 100%;
+  max-width: 500px;
+  padding: 0 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: auto;
+}
+
+#face .container .insta {
+  color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem !important;
+  margin: auto;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 300px;
+}
+
+#face .container .insta img {
+  width: 60px;
+}
+
+#face .container form {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#face .container form input {
+  height: 35px;
+  margin-top: 0.7rem;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid #c5c5c5;
+  border-radius: 3px;
+  color: grey;
+  font-size: 0.9rem;
+  background-color: rgba(236, 236, 236, 0.285);
+}
+
+#face .container form input::-webkit-input-placeholder {
+  font-size: 0.8rem;
+}
+
+#face .container form input:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+#face .container form input::-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+#face .container form input::placeholder {
+  font-size: 0.8rem;
+}
+
+#face .container form .f_p {
+  color: #047aa5;
+  text-decoration: none;
+  margin: 1rem auto;
+}
+
+#face .container form div.cog {
+  position: relative;
+  margin-top: .7rem;
+}
+
+#face .container form div.cog input[type="submit"] {
+  background-color: #047aa5;
+  color: #fff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  margin-top: 0;
+}
+
+#face .container form div.cog input[type="submit"]:disabled {
+  cursor: not-allowed;
+}
+
+#face .container form div.cog span {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  display: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#face .container form div.cog .fa-cog {
+  -webkit-transform: rotate("90deg");
+          transform: rotate("90deg");
+  -webkit-animation: _rotate .2s infinite linear;
+          animation: _rotate .2s infinite linear;
+}
+
+@-webkit-keyframes _rotate {
+  0% {
+    -webkit-transform: rotate("0deg");
+            transform: rotate("0deg");
+  }
+  99% {
+    -webkit-transform: rotate("180deg");
+            transform: rotate("180deg");
+  }
+}
+
+@keyframes _rotate {
+  0% {
+    -webkit-transform: rotate("0deg");
+            transform: rotate("0deg");
+  }
+  99% {
+    -webkit-transform: rotate("180deg");
+            transform: rotate("180deg");
+  }
+}
+
+#face .container form p {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#face .container form p a {
+  color: blue;
+  text-decoration: none;
+}
+
+#face .container form div {
+  position: relative;
+}
+
+#face .container form div input {
+  width: 100%;
+}
+
+#face .container form div small {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.8rem;
+  height: 2.1rem;
+  place-items: center;
+  cursor: pointer;
+  display: none;
+  padding: 0 5px;
+}
+
+#face footer {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
