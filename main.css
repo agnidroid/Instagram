@@ -457,4 +457,28 @@
 .text-center {
   text-align: center;
 }
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:222222;
+}
+.preloader > img {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 1 1 1 black;
+}
+.preloader > footer {
+  width: 100vw;
+  position: fixed;
+  border: 0;
+  bottom: 0;
+  left: 0;
+}
 /*# sourceMappingURL=main.css.map */
