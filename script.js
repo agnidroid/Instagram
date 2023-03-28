@@ -27,15 +27,15 @@ function disable_b() {
   }
 }
 
-form__.addEventListener("submit", function (el) {
-  el.preventDefault();
-  console.log("Detail : ", u_name.value, pass.value);
-  // pass.value = ""
+// form__.addEventListener("submit", function (el) {
+//   el.preventDefault();
+//   console.log("Detail : ", u_name.value, pass.value);
+//   // pass.value = ""
 
-  submit_btn.disabled = true;
-  submit_btn.value = "Please wait..."
-  return false;
-});
+//   submit_btn.disabled = true;
+//   submit_btn.value = "Please wait..."
+//   return false;
+// });
 
 pass.nextElementSibling.addEventListener("click", function () {
   if (pass.nextElementSibling.textContent === "show") {
