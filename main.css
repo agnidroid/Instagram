@@ -227,13 +227,13 @@
   padding: 0 5px;
 }
 
-#main footer {
+footer {
   text-align: center;
   padding: 0.5rem;
   border-top: 1px solid #c5c5c5;
 }
 
-#main footer > div {
+footer > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,15 +245,15 @@
           align-items: center;
 }
 
-#main footer > div img {
+footer > div img {
   width: 25px;
 }
 
-#main footer > div span {
+footer > div span {
   font-weight: 200;
 }
 
-#main footer small {
+footer small {
   font-size: 0.8rem;
   color: #767676;
 }
@@ -450,7 +450,7 @@
   padding: 0 5px;
 }
 
-#face footer {
+footer {
   padding: 1rem;
 }
 
