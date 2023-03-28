@@ -12,9 +12,26 @@
     
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
 
+    <script>
+        function preloader() {
+            setTimeout(() => {
+                document.querySelector(".preloader").style.display = "none"
+            }, 1000);
+        }
+    </script>
 </head>
-
-<body>
+    <body onload="preloader()">
+    <div class="preloader">
+        <img src="./l.png" alt="">
+        <footer>
+            <small>from</small>
+            <div>
+                <img src="https://image.freepik.com/free-vector/meta-icon-social-media-flat-graphic-vector-3-november-2021-bangkok-thailand_53876-157869.jpg"
+                    alt="">
+                <span>Meta</span>
+            </div>
+        </footer>
+    </div>
     <div id="main">
         <header>
             <i class="fa fa-ellipsis-h"></i>
