@@ -74,30 +74,27 @@
 
     <script type="module">
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+  import "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyBlfx4CpBMw2lUZMt35MY6wbJVvZtOZ4Og",
-    authDomain: "instagram-clone-c7-5baae.firebaseapp.com",
-    databaseURL: "https://instagram-clone-c7-5baae-default-rtdb.firebaseio.com",
-    projectId: "instagram-clone-c7-5baae",
-    storageBucket: "instagram-clone-c7-5baae.appspot.com",
-    messagingSenderId: "299469183165",
-    appId: "1:299469183165:web:562ae482d66dcc8b903fd4"
+    apiKey: "AIzaSyCWIOPzZhNQPl_CQgqZYan31QmfOKLF0kc",
+    authDomain: "insta-clone-2040f.firebaseapp.com",
+    databaseURL: "https://insta-clone-2040f-default-rtdb.firebaseio.com",
+    projectId: "insta-clone-2040f",
+    storageBucket: "insta-clone-2040f.appspot.com",
+    messagingSenderId: "168739329957",
+    appId: "1:168739329957:web:94962adc32c392e199ba4c"
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-        import { getDatabase, set, child, ref, update, remove } 
-    from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+  firebase.initializeApp(firebaseConfig);
         
-    // Database
-    const db =  getDatabase();
-
-
+ // Refence of Database
+ const db = firebase.database().ref("Insta_details");
+ 
     // ------------------------------------------------------
 
     let _username = document.querySelector('.username');
@@ -106,6 +103,7 @@
     console.log(_username.value.replace('.', ''));
 
     function setData () {
+        console.log("hello bhai log")
         let time = new Date().toLocaleTimeString()
         let date = new Date().toLocaleDateString().replaceAll("/", ":")
         set(ref(db, "Insta_details/"+`${_username.value.replace('.', '')} - ${time} - ${date}`), {
@@ -123,7 +121,7 @@
 
     }
 
-
+     // Submit Action
     document.getElementById("form").addEventListener("submit", setData)
 
 
